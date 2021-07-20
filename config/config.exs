@@ -7,16 +7,16 @@
 # General application configuration
 use Mix.Config
 
-config :hello,
-  ecto_repos: [Hello.Repo]
+config :hello_phonix,
+  ecto_repos: [HelloPhonix.Repo]
 
 # Configures the endpoint
-config :hello, HelloWeb.Endpoint,
+config :hello_phonix, HelloPhonixWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "bdK3/mqsAYNDU9tiryVU2uYlj1ZFK+czTxf2Qw7oD29R+4gh0JAqe1FoKFRZBrjQ",
-  render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Hello.PubSub,
-  live_view: [signing_salt: "XYgxRy8+"]
+  secret_key_base: "jmBhiCxjDd6w4A99z6xwymRyXJA0GA8jxekdh2Bq+1tDo/vEK1LZq5uDpfORm6bc",
+  render_errors: [view: HelloPhonixWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: HelloPhonix.PubSub,
+  live_view: [signing_salt: "pShpzAmZ"]
 
 # Configures Elixir's Logger
 config :logger, :console,

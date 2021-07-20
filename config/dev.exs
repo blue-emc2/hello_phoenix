@@ -1,11 +1,11 @@
 use Mix.Config
 
 # Configure your database
-config :hello, Hello.Repo,
+config :hello_phonix, HelloPhonix.Repo,
   username: "postgres",
   password: "postgres",
-  database: "hello_dev",
-  hostname: "localhost",
+  database: "hello_phonix_dev",
+  hostname: "db",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -15,7 +15,7 @@ config :hello, Hello.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :hello, HelloWeb.Endpoint,
+config :hello_phonix, HelloPhonixWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :hello, HelloWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :hello, HelloWeb.Endpoint,
+config :hello_phonix, HelloPhonixWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/hello_web/(live|views)/.*(ex)$",
-      ~r"lib/hello_web/templates/.*(eex)$"
+      ~r"lib/hello_phonix_web/(live|views)/.*(ex)$",
+      ~r"lib/hello_phonix_web/templates/.*(eex)$"
     ]
   ]
 

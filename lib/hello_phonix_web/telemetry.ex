@@ -1,4 +1,4 @@
-defmodule HelloWeb.Telemetry do
+defmodule HelloPhonixWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule HelloWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("hello.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("hello.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("hello.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("hello.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("hello.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("hello_phonix.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("hello_phonix.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("hello_phonix.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("hello_phonix.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("hello_phonix.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule HelloWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {HelloWeb, :count_users, []}
+      # {HelloPhonixWeb, :count_users, []}
     ]
   end
 end

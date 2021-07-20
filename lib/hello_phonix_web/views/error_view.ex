@@ -1,5 +1,5 @@
-defmodule HelloWeb.ErrorView do
-  use HelloWeb, :view
+defmodule HelloPhonixWeb.ErrorView do
+  use HelloPhonixWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

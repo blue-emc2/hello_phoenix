@@ -1,4 +1,4 @@
-# Hello
+# HelloPhonix
 
 To start your Phoenix server:
 
